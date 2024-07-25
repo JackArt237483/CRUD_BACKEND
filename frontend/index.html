@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Приложение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Форма товара</h2>
+    <form id="productForm">
+        <div class="form-group">
+            <label for="productName">Название товара</label>
+            <input type="text" id="productName" name="productName" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Количество</label>
+            <input type="number" id="quantity" name="quantity" required>
+        </div>
+        <div class="form-group">
+            <label for="creationYear">Год создания</label>
+            <input type="number" id="creationYear" name="creationYear" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Описание товара</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        <input type="hidden" id="productId" name="productId">
+        <div class="form-group">
+            <input type="submit" value="Добавить">
+        </div>
+    </form>
+    <h2>Список товаров</h2>
+    <div id="productList" class="product-list">
+        <!-- Данные будут добавлены здесь -->
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

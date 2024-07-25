@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/backend/create.php" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/backend/db.php" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/backend/delete.php" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/backend/read.php" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/backend/update.php" dialect="SQLite" />
+  </component>
+</project>
