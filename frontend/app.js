@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Загрузка данных
     function loadProducts() {
-        fetch('http://localhost/sites/site.loc/backend/read.php')
+        fetch('http://localhost/sites/site.loc/backend/index.php')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -53,14 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        if (!data.productId) {
-            delete data.productId;
-        }
-
         const method = data.productId ? 'PUT' : 'POST';
-        const url = data.productId
-            ? `http://localhost/sites/site.loc/backend/update.php?id=${data.productId}`
-            : 'http://localhost/sites/site.loc/backend/create.php';
+        const url = `http://localhost/sites/site.loc/backend/index.php${data.productId ? `?id=${data.productId}` : ''}`;
 
         fetch(url, {
             method: method,
@@ -87,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Удаление продукта
     window.deleteProduct = function(id) {
-        fetch(`http://localhost/sites/site.loc/backend/delete.php?id=${id}`, {
+        fetch(`http://localhost/sites/site.loc/backend/index.php?id=${id}`, {
             method: 'DELETE'
         })
             .then(response => {
@@ -110,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Редактирование продукта
     window.editProduct = function(id) {
-        fetch(`http://localhost/sites/site.loc/backend/read.php?id=${id}`)
+        fetch(`http://localhost/sites/site.loc/backend/index.php?id=${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
