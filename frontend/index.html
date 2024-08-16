@@ -7,35 +7,112 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h2>Форма товара</h2>
-    <form id="productForm">
-        <div class="form-group">
-            <label for="productName">Название товара</label>
-            <input type="text" id="productName" name="productName" required>
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="#">Логотип</a>
         </div>
-        <div class="form-group">
-            <label for="quantity">Количество</label>
-            <input type="number" id="quantity" name="quantity" required>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div>
+            <ul class="nav-list_loger">
+                <li><a href="#services" class="nav-link_login">Войти</a></li>
+                <li><a href="#contact" class="nav-link_register">Регистрация</a></li>
+            </ul>
         </div>
-        <div class="form-group">
-            <label for="creationYear">Год создания</label>
-            <input type="number" id="creationYear" name="creationYear" required>
-        </div>
-        <div class="form-group">
-            <label for="description">Описание товара</label>
-            <textarea id="description" name="description" required></textarea>
-        </div>
-        <input type="hidden" id="productId" name="productId">
-        <div class="form-group">
-            <input type="submit" value="Добавить">
-        </div>
-    </form>
-    <h2>Список товаров</h2>
-    <div id="productList" class="product-list">
-        <!-- Данные будут добавлены здесь -->
     </div>
-</div>
+</header>
+    <div class="container_item">
+        <h2>Форма товара</h2>
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productName">Название товара</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Количество</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="creationYear">Год создания</label>
+                <input type="number" id="creationYear" name="creationYear" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Описание товара</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <input type="hidden" id="productId" name="productId">
+            <div class="form-group">
+                <input type="submit" value="Добавить">
+            </div>
+        </form>
+        <h2>Список товаров</h2>
+        <div id="productList" class="product-list">
+            <!-- Данные будут добавлены здесь -->
+        </div>
+    </div>
+    <div class="content-wrapper">
+
+        <div>
+            <h2 class="form-heading">Регистрация</h2>
+            <form id="registerForm" class="user-form">
+                <div class="input-group">
+                    <label for="username" class="input-label">Имя пользователя</label>
+                    <input type="text" id="username" name="username" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone" class="input-label">Телефон</label>
+                    <input type="text" id="phone" name="phone" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <label for="email" class="input-label">Email</label>
+                    <input type="email" id="email" name="email" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="input-label">Пароль</label>
+                    <input type="password" id="password" name="password" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <input type="submit" value="Зарегистрироваться" class="submit-btn">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h2 class="form-heading">Вход</h2>
+            <form id="loginForm" class="user-form">
+                <div class="input-group">
+                    <label for="loginEmail" class="input-label">Email</label>
+                    <input type="email" id="loginEmail" name="loginEmail" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword" class="input-label">Пароль</label>
+                    <input type="password" id="loginPassword" name="loginPassword" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <input type="submit" value="Войти" class="submit-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+<footer class="main-footer">
+    <div class="footer-container">
+        <p>&copy; 2024 Ваша компания. Все права защищены.</p>
+        <nav class="footer-nav">
+            <ul class="footer-nav-list">
+                <li><a href="#privacy" class="footer-link">Политика конфиденциальности</a></li>
+                <li><a href="#terms" class="footer-link">Условия использования</a></li>
+                <li><a href="#sitemap" class="footer-link">Карта сайта</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
 <script src="app.js"></script>
 </body>
 </html>
